@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+    mysql-server:
+      image: registry.cn-beijing.aliyuncs.com/tinyscan/mysql:5.6.44
+      restart: always
+      hostname: mysql
+      container_name: tinyscan-mysql
+      environment:
+        - MYSQL_ROOT_PASSWORD=root
+      ports:
+        - 3306:3306
+      volumes:
+        - "/etc/localtime:/etc/localtime:ro"
+        - "/tinyscan/mysql/data:/usr/local/mysql/var"
+      networks:
+        - tinyscan
+networks:
+    tinyscan:

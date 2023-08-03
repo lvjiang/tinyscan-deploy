@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+    web-server:
+      image: registry.cn-beijing.aliyuncs.com/tinyscan/tinyscan-backend:dev-1.0.9
+      restart: always
+      container_name: tinyscan-web
+      ports:
+        - 443:443
+        - 4431:4431
+      volumes:
+        - "/etc/localtime:/etc/localtime:ro"
+        - "/tinyscan/web/logs:/app/logs"
+        - "/tinyscan/web/conf:/app/manifest/config"
+        - "/tinyscan/engine/export/file:/export/file"
+      depends_on:
+        - mysql-server
+        - mongo-server
+      networks:
+        tinyscan:
+networks:
+    tinyscan:

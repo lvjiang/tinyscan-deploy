@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+    mongo-server:
+      image: registry.cn-beijing.aliyuncs.com/tinyscan/mongodb:4.2.8
+      restart: always
+      hostname: mongo
+      container_name: tinyscan-mongo
+      environment:
+        - MONGO_INITDB_ROOT_USERNAME=root
+        - MONGO_INITDB_ROOT_PASSWORD=root
+      ports:
+        - 27017:27017
+      volumes:
+        - "/etc/localtime:/etc/localtime:ro"
+        - "/tinyscan/mongo/db:/data/db"
+        - "/tinyscan/mongo/rule:/data/rule"
+      command: mongod --auth
+      networks:
+        - tinyscan
+networks:
+    tinyscan:
