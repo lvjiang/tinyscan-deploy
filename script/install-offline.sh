@@ -11,9 +11,6 @@ if [ -f "$checkFile" ]; then
     exit 1
 fi
 
-WORK_DIR_NAME=$(cd "$(dirname "$0")"; pwd)
-cd $WORK_DIR_NAME
-
 chmod u+x ./*.sh
 chmod u+x ./tinyscan/script/*.sh
 chmod u+x ./tinyscan/engine/export/bin/*
@@ -22,12 +19,9 @@ cp -rf ./tinyscan /tinyscan
 echo "Install docker..."
 ./install_docker.sh
 
-echo "Install service..."
-./install_service.sh
-
 echo "Docker load imagesi..."
-# /tinyscan/script/quick_update.sh -l ./images
-./docker_login.sh
+/tinyscan/script/quick_update.sh -l ./images
+
 
 echo "Init mongodb..."
 ./init_mongo.sh
@@ -36,9 +30,11 @@ echo "Init mysql..."
 ./init_mysql.sh
 
 
+echo "Install service..."
+./install_service.sh
+
 echo "Start server"
 systemctl start tinyscan-app
-#/tinyscan/script/start.sh up -d
 
 touch ${checkFile}
 echo "Install done"
