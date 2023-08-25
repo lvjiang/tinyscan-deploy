@@ -64,6 +64,8 @@
 
 **注：制作环境：ubuntu,centos等linux操作系统，用户：普通用户或root用户**
 
+**注：如要制作离线镜像安装包，需要制作机器上安装有docker环境，用于导出镜像**
+
 
 
 ### 2.1 下载
@@ -103,7 +105,7 @@
 
 ​			image行:	`image: registry.cn-beijing.aliyuncs.com/tinyscan/tinyscan-backend:dev-1.0.9`
 
-​			修改成:       `image: registry.cn-beijing.aliyuncs.com/tinyscan/tinyscan-backend:dev-1.5.0`
+​			修改成:     `image: registry.cn-beijing.aliyuncs.com/tinyscan/tinyscan-backend:dev-1.5.0`
 
 
 
@@ -125,11 +127,11 @@
 
 1. `make dist` （可跳过）
 
-2. `make  active`  (可跳过，制作客户自行安装的包时，必须跳过)
+2. `make active`  (可跳过，制作客户自行安装的包时，必须跳过)
 
 3. `make images` (可跳过，将离线镜像包含到安装包中。执行时很费时间，请耐心等待。如果跳过此步骤，需要通过其他方式提供所需的离线docker镜像tar包)
 
-    **注：执行此步骤需要，机器安装有docker环境，并且执行用户拥有执行docker命令的权限**
+    **注：执行此步骤需要，制作机器安装有docker环境，并且执行用户拥有执行docker命令的权限**
 
 4. `make offline` （必须，如果执行了步骤3，本步骤也很费时间，请耐心等待）
 
@@ -138,8 +140,8 @@
 **在线镜像安装包**(dist-online.tar.xz)制作步骤：
 
 1. `make dist` （可跳过）
-2. `make  active`  (可跳过，制作客户自行安装的包时，必须跳过)
-3. `make offline` （必须）
+2. `make active`  (可跳过，制作客户自行安装的包时，必须跳过)
+3. `make online` （必须）
 
 
 
@@ -218,7 +220,7 @@ tinyscan-mongo    Up 40 minutes                   registry.cn-beijing.aliyuncs.c
    
    **注：不要修改其他行的内容，等号两边没有空格。**
    
-4. 执行 `systemctl stop tinyscan-app&&sleep 3s&&systemctl start tinyscan-app`
+4. 执行 `systemctl stop tinyscan-app && sleep 3s && systemctl start tinyscan-app`
 
    
 

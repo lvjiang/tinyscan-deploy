@@ -13,6 +13,7 @@ offline: dist
 images: dist
 	mkdir dist/images
 	./script/docker_login.sh
+	./dist/tinyscan/script/quick_update.sh -p
 	./dist/tinyscan/script/quick_update.sh -s ./dist/images
 	./script/docker_logout.sh
 
