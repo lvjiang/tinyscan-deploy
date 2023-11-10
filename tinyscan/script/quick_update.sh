@@ -3,7 +3,7 @@
 mongodb="registry.cn-beijing.aliyuncs.com/tinyscan/mongodb:4.2.8"
 mysql="registry.cn-beijing.aliyuncs.com/tinyscan/mysql:5.6.44"
 engine="registry.cn-beijing.aliyuncs.com/tinyscan/ubuntu-base:tinyscan-engine_v4"
-web="registry.cn-beijing.aliyuncs.com/tinyscan/tinyscan-backend:dev-1.0.9"
+web="registry.cn-beijing.aliyuncs.com/tinyscan/tinyscan-backend:dev-1.5.0.11"
 
 
 function pull()
