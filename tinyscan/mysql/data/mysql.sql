@@ -22,22 +22,26 @@ CREATE TABLE `menu`  (
 -- ----------------------------
 -- Records of menu
 -- ----------------------------
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (1, '用户管理', 1, 0, 0);
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (2, '新建用户', 1, 1, 0);
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (3, '用户列表', 1, 1, 0);
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (4, '报告管理', 1, 0, 0);
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (5, '报告配置', 1, 4, 0);
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (6, '任务管理', 1, 0, 0);
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (7, '固件检测', 1, 6, 0);
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (8, 'APP检测', 1, 6, 0);
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (9, '任务列表', 1, 6, 0);
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (10, '任务管理', 0, 0, 0);
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (11, '固件检测', 0, 10, 0);
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (12, 'APP检测', 0, 10, 0);
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (13, '任务列表', 0, 10, 0);
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (14, '系统管理', 2, 0, 0);
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (15, '页面配置', 2, 14, 0);
-INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (16, '管理员配置', 2, 14, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (1, '报告管理', 0, 0, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (2, '报告配置', 0, 1, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (3, '报告对比', 0, 2, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (4, '任务管理', 0, 0, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (5, '固件检测', 0, 4, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (6, 'APP检测', 0, 4, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (7, '任务列表', 0, 4, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (101, '用户管理', 1, 100, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (102, '新建用户', 1, 101, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (103, '用户列表', 1, 101, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (104, '报告管理', 1, 100, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (105, '报告配置', 1, 104, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (106, '报告对比', 1, 104, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (107, '任务管理', 1, 100, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (108, '固件检测', 1, 107, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (109, 'APP检测', 1, 107, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (110, '任务列表', 1, 107, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (201, '系统管理', 2, 200, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (202, '页面配置', 2, 201, 0);
+INSERT INTO `menu` (`id`, `item`, `role`, `parent`, `is_delete`) VALUES (203, '管理员配置', 2, 201, 0);
 
 -- ----------------------------
 -- Table structure for user

@@ -96,7 +96,7 @@
    mongodb="registry.cn-beijing.aliyuncs.com/tinyscan/mongodb:4.2.8"
    mysql="registry.cn-beijing.aliyuncs.com/tinyscan/mysql:5.6.44"
    engine="registry.cn-beijing.aliyuncs.com/tinyscan/ubuntu-base:tinyscan-engine_v4"
-   web="registry.cn-beijing.aliyuncs.com/tinyscan/tinyscan-backend:dev-1.5.0.11"
+   web="registry.cn-beijing.aliyuncs.com/tinyscan/tinyscan-backend:dev-1.5.1"
    ```
 
 2. 修改./tinyscan/docker-compose-yml/文件夹下对应的yml文件。
@@ -105,7 +105,7 @@
 
 ​			image行:	`image: registry.cn-beijing.aliyuncs.com/tinyscan/tinyscan-backend:dev-1.0.9`
 
-​			修改成:     `image: registry.cn-beijing.aliyuncs.com/tinyscan/tinyscan-backend:dev-1.5.0.11`
+​			修改成:     `image: registry.cn-beijing.aliyuncs.com/tinyscan/tinyscan-backend:dev-1.5.1`
 
 
 
@@ -181,7 +181,7 @@
 ```
 NAMES             STATUS                          IMAGE
 tinyscan-engine   Restarting (1) 32 seconds ago   registry.cn-beijing.aliyuncs.com/tinyscan/ubuntu-base:tinyscan-engine_v4
-tinyscan-web      Up 40 minutes                   registry.cn-beijing.aliyuncs.com/tinyscan/tinyscan-backend:dev-1.0.9
+tinyscan-web      Up 40 minutes                   registry.cn-beijing.aliyuncs.com/tinyscan/tinyscan-backend:dev-1.5.1
 tinyscan-mysql    Up 40 minutes                   registry.cn-beijing.aliyuncs.com/tinyscan/mysql:5.6.44
 tinyscan-mongo    Up 40 minutes                   registry.cn-beijing.aliyuncs.com/tinyscan/mongodb:4.2.8
 
